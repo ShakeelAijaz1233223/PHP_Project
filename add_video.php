@@ -32,14 +32,88 @@ if(isset($_POST['upload'])){
 <head>
 <title>Add Video</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body {
+    background: #121212;
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+    background: url('bg.jpg') no-repeat center center;
+    background-size: auto;
+    position: relative;
+}
+
+.container {
+    max-width: 500px;
+    margin-top: 80px;
+    background: #1f1f1f;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255,111,97,0.3);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.form-control {
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px;
+    transition: all 0.2s;
+}
+
+.form-control:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 8px #000000;
+    background: #2a2a2a;
+    color: #fff;
+}
+
+.btn-primary {
+    width: 100%;
+    background: #000000;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+input[type="file"] {
+    padding: 5px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1daa35;
+    font-weight: bold;
+}
+</style>
 </head>
 <body>
 
-<div class="container mt-5">
+<div class="container">
     <h2>Add Video</h2>
     <form method="POST" enctype="multipart/form-data">
-        <input class="form-control mb-3" type="text" name="title" placeholder="Video Title" required>
-        <input class="form-control mb-3" type="file" name="video" required>
+        <label for="title">Video Title</label>
+        <input id="title" class="form-control mb-3" type="text" name="title" placeholder="Enter video title" required>
+
+        <label for="video">Select Video</label>
+        <input id="video" class="form-control mb-3" type="file" name="video" required>
+
         <button class="btn btn-primary" name="upload">Upload Video</button>
     </form>
 </div>
