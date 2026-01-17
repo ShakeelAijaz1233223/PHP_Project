@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "dashboard_db");
+$conn = mysqli_connect("localhost", "root", "", "music_admin");
 
 if (!$conn) {
     die("Database Connection Failed: " . mysqli_connect_error());

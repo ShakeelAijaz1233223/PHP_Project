@@ -33,12 +33,13 @@ if(isset($_POST['upload'])){
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Add Music</title>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
 body {
- background: #121212;
+    background: #121212;
     font-family: 'Segoe UI', sans-serif;
     color: #fff;
     background: url('bg.jpg') no-repeat center center;
@@ -46,6 +47,25 @@ body {
     position: relative;
 }
 
+/* BACK BUTTON */
+.back-btn {
+    position: sticky;
+    top: 10px;
+    left: 20px;
+    background: #000;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.back-btn:hover {
+    background: #1daa35;
+    color: #000;
+}
 
 .container {
     max-width: 500px;
@@ -108,19 +128,28 @@ label {
 }
 </style>
 </head>
+
 <body>
+
+<!-- BACK BUTTON -->
+<a href="dashboard.php" class="back-btn">
+    <i class="fa fa-arrow-left"></i> Back
+</a>
 
 <div class="container">
     <h2><i class="fa fa-upload"></i> Upload Music</h2>
     <form method="POST" enctype="multipart/form-data">
+
         <label for="title">Song Title</label>
         <input class="form-control mb-3" type="text" id="title" name="title" placeholder="Enter Song Title" required>
 
-        
         <label for="music">Select Music File</label>
         <input class="form-control mb-3" type="file" id="music" name="music" required>
 
-        <button class="btn btn-primary" name="upload"><i class="fa fa-music"></i> Upload Music</button>
+        <button class="btn btn-primary" name="upload">
+            <i class="fa fa-music"></i> Upload Music
+        </button>
+
     </form>
 </div>
 

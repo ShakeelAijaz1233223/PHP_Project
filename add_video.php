@@ -31,7 +31,12 @@ if(isset($_POST['upload'])){
 <html>
 <head>
 <title>Add Video</title>
+
+<!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 <style>
 body {
     background: #121212;
@@ -40,6 +45,26 @@ body {
     background: url('bg.jpg') no-repeat center center;
     background-size: auto;
     position: relative;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    position: sticky;
+    top: 10px;
+    left: 20px;
+    background: #000;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.back-btn:hover {
+    background: #1daa35;
+    color: #000;
 }
 
 .container {
@@ -103,7 +128,13 @@ label {
 }
 </style>
 </head>
+
 <body>
+
+<!-- BACK BUTTON -->
+<a href="dashboard.php" class="back-btn">
+    <i class="fa fa-arrow-left"></i> Back
+</a>
 
 <div class="container">
     <h2>Add Video</h2>
@@ -117,6 +148,7 @@ label {
         <button class="btn btn-primary" name="upload">Upload Video</button>
     </form>
 </div>
+
 
 </body>
 </html>

@@ -34,7 +34,6 @@ $userCount  = mysqli_num_rows(mysqli_query($conn,"SELECT id FROM users"));
     <a href="dashboard.php"><i class="fa fa-house"></i> Dashboard</a>
     <a href="Music_View.php"><i class="fa fa-music"></i> Musics</a>
    <a href="Video_View.php"><i class="fa fa-video"></i> Videos</a>
-    <a href="play_list.php"><i class="fa fa-compact-disc"></i> Play List</a>
     <a href="users.php"><i class="fa fa-users"></i> Users</a>
     <hr style="border-color: #333;">
     <a href="add_music.php"><i class="fa fa-upload"></i> Upload Music</a>
